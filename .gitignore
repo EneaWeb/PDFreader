@@ -1,6 +1,6 @@
-/vendor/
-/logs/*
-!/logs/README.md
-/dependencies/*
-/public/reader/pdf/*
-/public/reader/docs/*
+/node_modules
+/public/storage
+/.idea
+Homestead.json
+Homestead.yaml
+.env
