@@ -40,9 +40,14 @@ if($configManager->getConfig('admin.password')==null){
                 border-top: 20px solid transparent!important;
             }
 
-            .pagesContainer_documentViewer_panelRight, 
-            .pagesContainer_documentViewer_panelLeft {
+            #pagesContainer_documentViewer_panelRight, 
+            #pagesContainer_documentViewer_panelLeft,
+            #toolbar_documentViewer {
                 background-color:black!important;
+            }
+
+            #toolbar_documentViewer_barSearchTools.flowpaper_tbseparator {
+                display:none!important;
             }
 
             .flowpaper_tbbutton.flowpaper_bttnTextSelect {
@@ -51,6 +56,8 @@ if($configManager->getConfig('admin.password')==null){
             .flowpaper_bttnDownload.flowpaper_tbbutton.download {
                 display:none!important;
             }
+
+            .flowpaper_fisheye_item { cursor:pointer!important; }
         </style>
 
         <link rel="stylesheet" type="text/css" href="css/flowpaper.css" />
