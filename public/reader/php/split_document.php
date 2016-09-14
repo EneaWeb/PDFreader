@@ -92,7 +92,7 @@ if($configManager->getConfig('admin.password')==null){
                         BackgroundImage     : '{{BackgroundImage}}',
                         AddDropShadow       : true,
                         AnimationClasses    : { H1Text : 'Fade In Up',H2Text : 'None',H3Text : 'None',H4Text : 'Alternating Lines', BodyText : 'None' },
-                        key                 : '~13ba6daaa1c004281b9'
+                        key : '<?php echo $configManager->getConfig('licensekey') ?>',
                     }}
                 );
             </script>
