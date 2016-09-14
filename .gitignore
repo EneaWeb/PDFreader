@@ -6,3 +6,4 @@ Homestead.yaml
 .env
 /public/reader/docs/*
 /public/reader/pdf/*
+/public/reader/php/config/*
