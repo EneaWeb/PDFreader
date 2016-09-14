@@ -112,7 +112,7 @@ if($configManager->getConfig('admin.password')==null){
                         SidebarOpen         : false,
                         ReflowWithSidebar   : false,
                         SearchHinter        : null,
-                        AnimationStyle      : 'Flip',
+                        AnimationStyle      : 'FlipView',
                         AddPageShadows      : true,
                         Animate             : true,
                         SingleFirstPage     : true,
