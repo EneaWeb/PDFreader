@@ -41,9 +41,10 @@ if($configManager->getConfig('admin.password')==null){
             }
 
             .pagesContainer_documentViewer_panelRight, 
-            .pagesContainer_documentViewer_panelLeft,  {
+            .pagesContainer_documentViewer_panelLeft {
                 background-color:black!important;
             }
+
             .flowpaper_tbbutton.flowpaper_bttnTextSelect {
                 display:none!important;
             }
