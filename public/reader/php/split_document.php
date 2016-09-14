@@ -18,10 +18,31 @@ if($configManager->getConfig('admin.password')==null){
         <style type="text/css" media="screen">
             html, body  { width:100%; height:100%; }
             body { margin:0; padding:0; overflow:auto; }
-            #flashContent { display:none; }
-            .flowpaper_fisheye_panelRight,
+
+            /* LEFT CLICK TO SCROLL PAGES */
             .flowpaper_fisheye_panelLeft {
-                background-color:none;
+                background-color:inherit!important;
+            }
+            .flowpaper_fisheye_leftArrow {
+                top: 20%!important;
+                right: 10px!important;
+                border-bottom: 16px solid transparent!important;
+                border-top: 20px solid transparent!important;
+            }
+            /* RIGHT CLICK TO SCROLL PAGES */
+            .flowpaper_fisheye_panelRight {
+                background-color:inherit!important;
+            }
+            .flowpaper_fisheye_rightArrow {
+                top: 20%!important;
+                left: 10px!important;
+                border-bottom: 16px solid transparent!important;
+                border-top: 20px solid transparent!important;
+            }
+
+            .pagesContainer_documentViewer_panelRight, 
+            .pagesContainer_documentViewer_panelLeft,  {
+                background-color:black!important;
             }
             .flowpaper_tbbutton.flowpaper_bttnTextSelect {
                 display:none!important;
@@ -38,7 +59,7 @@ if($configManager->getConfig('admin.password')==null){
         <script type="text/javascript" src="js/three.min.js"></script>
         <!--<![endif]-->
         <script type="text/javascript" src="js/flowpaper.js"></script>
-        <script type="text/javascript" src="js/flowpaper_handlers.js"></script>
+        <!-- <script type="text/javascript" src="js/flowpaper_handlers.js"></script> -->
     </head>
     <body>
             <div id="documentViewer" class="flowpaper_viewer" style="position:absolute;left:0;top:0;width:100%;height:100%"></div>
@@ -98,9 +119,10 @@ if($configManager->getConfig('admin.password')==null){
                         MaxVisiblePages     : 2,
                         LayoutMode          : 'Responsive',
                         InactiveOpacity     : '0.3',
-                        BackgroundColor     : '#cccccc',
+                        BackgroundColor     : '#2A2A2A',
                         BackgroundImage     : '{{BackgroundImage}}',
                         AddDropShadow       : true,
+                        localeChain: 'it_IT',
                         AnimationClasses    : { H1Text : 'Fade In Up',H2Text : 'None',H3Text : 'None',H4Text : 'Alternating Lines', BodyText : 'None' },
                         key : '<?php echo $configManager->getConfig('licensekey') ?>',
                     }}
