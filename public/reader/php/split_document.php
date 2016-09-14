@@ -16,9 +16,19 @@ if($configManager->getConfig('admin.password')==null){
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" />
         <style type="text/css" media="screen">
-            html, body  { height:100%; }
+            html, body  { width:100%; height:100%; }
             body { margin:0; padding:0; overflow:auto; }
             #flashContent { display:none; }
+            .flowpaper_fisheye_panelRight,
+            .flowpaper_fisheye_panelLeft {
+                background-color:none;
+            }
+            .flowpaper_tbbutton.flowpaper_bttnTextSelect {
+                display:none!important;
+            }
+            .flowpaper_bttnDownload.flowpaper_tbbutton.download {
+                display:none!important;
+            }
         </style>
 
         <link rel="stylesheet" type="text/css" href="css/flowpaper.css" />
@@ -31,7 +41,7 @@ if($configManager->getConfig('admin.password')==null){
         <script type="text/javascript" src="js/flowpaper_handlers.js"></script>
     </head>
     <body>
-            <div id="documentViewer" class="flowpaper_viewer" style="position:absolute;left:10px;top:10px;width:770px;height:500px"></div>
+            <div id="documentViewer" class="flowpaper_viewer" style="position:absolute;left:0;top:0;width:100%;height:100%"></div>
             <?php
             if(isset($_GET["doc"])){
                 $doc = substr($_GET["doc"],0,strlen($_GET["doc"])-4);
