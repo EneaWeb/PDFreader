@@ -7,4 +7,5 @@ Homestead.yaml
 /public/reader/docs/*
 /public/reader/php/docs/*
 /public/reader/pdf/*
+/public/reader/swftools/*
 /public/reader/php/config/*
