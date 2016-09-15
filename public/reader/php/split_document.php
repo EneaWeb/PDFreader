@@ -67,7 +67,7 @@ if($configManager->getConfig('admin.password')==null){
         <script type="text/javascript" src="js/three.min.js"></script>
         <!--<![endif]-->
         <script type="text/javascript" src="js/flowpaper.js"></script>
-        <!-- <script type="text/javascript" src="js/flowpaper_handlers.js"></script> -->
+        <script type="text/javascript" src="js/flowpaper_handlers.js"></script>
     </head>
     <body>
             <div id="documentViewer" class="flowpaper_viewer" style="position:absolute;left:0;top:0;width:100%;height:100%"></div>
