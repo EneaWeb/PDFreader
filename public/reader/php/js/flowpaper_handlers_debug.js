@@ -16,7 +16,7 @@
  along with FlowPaper.  If not, see <http://www.gnu.org/licenses/>.
 
  For more information on FlowPaper please see the FlowPaper project
- home page: http://flowpaper.devaldi.com
+ home page: https://flowpaper.com
  */
 
 jQuery(function() {

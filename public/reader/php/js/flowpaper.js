@@ -4,7 +4,7 @@
  This file is part of FlowPaper.
 
  For more information on FlowPaper please see the FlowPaper project
- home page: http://flowpaper.devaldi.com
+ home page: https://flowpaper.com
  */
 
 /**
@@ -166,6 +166,7 @@ window.FlowPaperViewerEmbedding = window.$f = function(id, args) {
         BackgroundAlpha         : config.BackgroundAlpha, // FlowPaper Zine parameter
         UIConfig                : config.UIConfig,  // FlowPaper Zine parameter
         PageIndexAdjustment     : config.PageIndexAdjustment,
+        SharingUrl              : config.SharingUrl,
 
         ViewModeToolsVisible 	: ((config.ViewModeToolsVisible!=null)?config.ViewModeToolsVisible:true),
         ZoomToolsVisible 		: ((config.ZoomToolsVisible!=null)?config.ZoomToolsVisible:true),
@@ -934,6 +935,7 @@ window.FlowPaperViewerEmbedding = window.$f = function(id, args) {
                                 PreviewMode             : conf.PreviewMode,
                                 MixedMode               : conf.MixedMode,
                                 LoaderImage             : conf.LoaderImage,
+                                SharingUrl              : conf.SharingUrl,
                                 EnableWebGL             : conf.EnableWebGL,
                                 StartAtPage 			: conf.StartAtPage,
                                 RenderingOrder 			: conf.RenderingOrder,

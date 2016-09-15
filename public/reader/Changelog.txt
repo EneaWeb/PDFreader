@@ -1,3 +1,8 @@
+September/October
+ » Fixed an issue where encrypted Zine publications would load corrupted images on some web servers
+ » Fixed an issue where the viewer was being show too early causing the size of the viewer to be incorrectly calculated (Zine)
+
+
 August
  » Fixed an issue related to the color selector not withdrawing after changing annotations tool (Classic)
  » Fixed an issue related to fitting the page horizontally when the page is rotated caused incorrect fitting (Classic)
@@ -8,6 +13,21 @@ August
  » Fixed an issue where going from 10 pages to all pages in preview when working with two-fold publications in Elements caused one of the pages not to render properly (Elements)
  » Fixed an issue where one of the Zine styles (with the toolbar in the bottom) would misposition the toolbar (Zine)
  » Updated our php sample scripts to use mysqli for PHP 7.x and higher (Classic)
+ » Fixed an issue where coming out of full screen using the toolbar button in IE11 would cause the viewer to be incorrectly resized (Zine)
+ » Mobile/Desktop and Tablet controls now have their own settings section under controls allowing further controls on which buttons that are visible (Desktop Publisher)
+ » Improved clipping pdfs imported into FlexPaper Elements
+ » More text animations added to FlexPaper Elements (Desktop Publisher)
+ » Fixed an issue where the bookmarks (or outline) would not be resolved properly in Elements mode and EPUB mode (Desktop Publisher)
+ » Fixed an issue where some sub sets of standard fonts were not being converted (Elements)
+ » Fixed an issue where matching similar fonts didn't produce matches in the final copy (Elements)
+ » Fixed an issue where mouse wheel scrolling would cause the page to scroll if the viewer was smaller than the viewport (Zine)
+ » Fixed an issue where searching using an empty string would generate an error in the viewer (Classic, Zine)
+ » Fixed an issue where navigating quickly next was not coherent with navigating quickly to previous pages (Classic)
+ » Fixed an issue where entering page numbers in the print dialogue wasn't possible when text annotations were shown behind the dialogue (Classic)
+ » Fixed an issue where the publisher was unable to open the publication in some cases and generating the error UnexpectedResponseException(0) (Desktop Publisher)
+ » Added the ability to move around text elements in the publisher (Elements mode)
+ » Added the ability to animate individual text elements (more animation settings and modes are coming up shortly!) (Desktop Publisher)
+ » It is now possible to export and distribute Adobe PhoneGap applications using Elements (Desktop Publisher)
 
 
 July
