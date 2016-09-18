@@ -16,9 +16,48 @@ if($configManager->getConfig('admin.password')==null){
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" />
         <style type="text/css" media="screen">
-			html, body	{ height:100%; }
-			body { margin:0; padding:0; overflow:auto; }
-			#flashContent { display:none; }
+            html, body  { width:100%; height:100%; }
+            body { margin:0; padding:0; overflow:auto; }
+
+            /* LEFT CLICK TO SCROLL PAGES */
+            .flowpaper_fisheye_panelLeft {
+                background-color:inherit!important;
+            }
+            .flowpaper_fisheye_leftArrow {
+                top: 20%!important;
+                right: 10px!important;
+                border-bottom: 16px solid transparent!important;
+                border-top: 20px solid transparent!important;
+            }
+            /* RIGHT CLICK TO SCROLL PAGES */
+            .flowpaper_fisheye_panelRight {
+                background-color:inherit!important;
+            }
+            .flowpaper_fisheye_rightArrow {
+                top: 20%!important;
+                left: 10px!important;
+                border-bottom: 16px solid transparent!important;
+                border-top: 20px solid transparent!important;
+            }
+
+            #pagesContainer_documentViewer_panelRight, 
+            #pagesContainer_documentViewer_panelLeft,
+            #toolbar_documentViewer {
+                background-color:black!important;
+            }
+
+            #toolbar_documentViewer_barSearchTools.flowpaper_tbseparator {
+                display:none!important;
+            }
+
+            .flowpaper_tbbutton.flowpaper_bttnTextSelect {
+                display:none!important;
+            }
+            .flowpaper_bttnDownload.flowpaper_tbbutton.download {
+                display:none!important;
+            }
+
+            .flowpaper_fisheye_item { cursor:pointer!important; }
         </style>
 
 		<link rel="stylesheet" type="text/css" href="css/flowpaper.css" />
