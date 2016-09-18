@@ -70,7 +70,7 @@ if($configManager->getConfig('admin.password')==null){
 		<script type="text/javascript" src="js/flowpaper_handlers.js"></script>
     </head>
     <body>
-			<div id="documentViewer" class="flowpaper_viewer" style="position:absolute;left:10px;top:10px;width:770px;height:500px"></div>
+			<div id="documentViewer" class="flowpaper_viewer" style="position:absolute;left:0;top:0;width:100%;height:100%"></div>
 	        <?php
 	        if(isset($_GET["doc"])){
 	            $doc = substr($_GET["doc"],0,strlen($_GET["doc"])-4);
