@@ -4,10 +4,10 @@
 Homestead.json
 Homestead.yaml
 .env
-/public/reader/docs/*
-/public/reader/php/docs/*
-/public/reader/pdf/*
-/public/reader/swftools/*
-/public/reader/php/config/*
-/public/reader/php/pdf/*
-/public/reader/php/docs/*
+/public/r/docs/*
+/public/r/php/docs/*
+/public/r/pdf/*
+/public/r/swftools/*
+/public/r/php/config/*
+/public/r/php/pdf/*
+/public/r/php/docs/*
