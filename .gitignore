@@ -11,3 +11,5 @@ Homestead.yaml
 /public/r/php/config/*
 /public/r/php/pdf/*
 /public/r/php/docs/*
+/ppmy/*
+/pyublic/ppmy/*
