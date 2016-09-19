@@ -47,7 +47,10 @@ require_once("../lib/mudraw_php5.php");
        $pdfFilePath = $configManager->getConfig('path.swf') . $subfolder . $pdfdoc;
     }
 
-	session_start();
+	if(!isset($_SESSION)) 
+	   { 
+	      session_start(); 
+	   } 
 
 	if(!is_dir($configManager->getConfig('path.swf'))){
 		Echo "Error:Cannot find SWF output directory, please check your configuration file";
