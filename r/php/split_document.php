@@ -113,8 +113,8 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
 						 SearchMatchAll : false,
   						 SearchServiceUrl : searchServiceUrl,
 						 InitViewMode : '',
-						 EnableWebGL : false,
-						 MixedMode : false,
+						 EnableWebGL : true,
+						 MixedMode : true,
 						 RenderingOrder : '<?php echo ($configManager->getConfig('renderingorder.primary') . ',' . $configManager->getConfig('renderingorder.secondary')) ?>',
 
 						 ViewModeToolsVisible : true,
