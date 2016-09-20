@@ -107,7 +107,7 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
 						 FitPageOnLoad : true,
 						 FitWidthOnLoad : false,
 						 FullScreenAsMaxWindow : true,
-						 ProgressiveLoading : true,
+						 ProgressiveLoading : false,
 						 MinZoomSize : 0.1,
 						 MaxZoomSize : 5,
 						 SearchMatchAll : false,
@@ -129,7 +129,7 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
 						 JSONDataType : 'jsonp',
 
 						 WMode : 'transparent',
-  						 localeChain: 'it_IT'
+  						 localeChain: 'en_EN'
 						 }}
 				);
 	        </script>
