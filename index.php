@@ -16,9 +16,9 @@ try {
     $dbh = new PDO('mysql:host=localhost;dbname=pdf', 'root', 'Diagonalli872|');
     //$q = $dbh->query('TRUNCATE TABLE pdfs');
     //$q = $dbh->query('INSERT INTO pdfs (id_rivista, num_rivista, name) VALUES ("1344", "5", "HipHopRap_iPad(1).pdf"), ("859", "12", "Speciale_LIGHTROOM.pdf")');
-    foreach($dbh->query("SELECT name from pdfs WHERE id_rivista = '$id_rivista' AND num_rivista = '$num_rivista' ") as $row) {
-        print_r($row);
-    }
+	foreach($dbh->query("SELECT * from pdfs WHERE id_rivista = '$id_rivista' AND num_rivista = '$num_rivista' ") as $row) {
+		$filename = $row['name'];
+	}
     $dbh = null;
 } catch (PDOException $e) {
    print "Error!: " . $e->getMessage() . "<br/>";
