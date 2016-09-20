@@ -17,7 +17,9 @@
 	}
 	
 	$loginerr = "";
-	session_start();
+	if(!isset($_SESSION)) {
+		session_start();
+	}
 	
 	$pdfFilePath = $configManager->getConfig('path.pdf');
 	$subFolder = "";
