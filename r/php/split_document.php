@@ -18,7 +18,7 @@ if ( $_GET["subfolder"] != NULL && $_GET["subfolder"] != '') {
 ?>
 <!doctype html>
     <head>
-        <title>FlowPaper AdaptiveUI PHP Example</title>
+        <title>Sprea Digital</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" />
         <style type="text/css" media="screen">
