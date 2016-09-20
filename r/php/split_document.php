@@ -107,7 +107,7 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
 						 FitPageOnLoad : true,
 						 FitWidthOnLoad : false,
 						 FullScreenAsMaxWindow : true,
-						 ProgressiveLoading : false,
+						 ProgressiveLoading : true,
 						 MinZoomSize : 0.1,
 						 MaxZoomSize : 5,
 						 SearchMatchAll : false,
