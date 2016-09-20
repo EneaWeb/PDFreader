@@ -129,7 +129,7 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
 						 JSONDataType : 'jsonp',
 
 						 WMode : 'transparent',
-  						 localeChain: 'en_US'
+  						 localeChain: 'it_IT'
 						 }}
 				);
 	        </script>
