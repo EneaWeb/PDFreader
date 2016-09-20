@@ -13,5 +13,3 @@ try {
 $id_rivista = $_GET['id_rivista'];
 $num_rivista = $_GET['num_rivista'];
 
-
-if ($_GET['id_rivsta'])
