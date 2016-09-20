@@ -12,6 +12,7 @@ if ($id_rivista == '' || $num_rivista == '') {
 }
 ##
 
+// GET FILENAME FROM DATABASE WITH DATA
 try {
     $dbh = new PDO('mysql:host=localhost;dbname=pdf', 'root', 'Diagonalli872|');
     //$q = $dbh->query('TRUNCATE TABLE pdfs');
@@ -19,8 +20,11 @@ try {
 	foreach($dbh->query("SELECT * from pdfs WHERE id_rivista = '$id_rivista' AND num_rivista = '$num_rivista' ") as $row) {
 		$filename = $row['name'];
 	}
-    $dbh = null;
+	$dbh = null;
 } catch (PDOException $e) {
    print "Error!: " . $e->getMessage() . "<br/>";
    die();
 }
+//
+
+header("location: /r/split_document.php?page=&file=".$filename);
