@@ -2,7 +2,9 @@
 	require_once("lib/common.php");
 	require_once("lib/config.php");
 	$configManager = new Config();
-	session_start();
+	if(!isset($_SESSION)) {
+		session_start();
+	}
 	
 	if($configManager->getConfig('admin.password')==null){
 		$url = 'setup.php';
