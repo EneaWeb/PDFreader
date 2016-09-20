@@ -89,7 +89,7 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
 	        <script type="text/javascript">
 		        function getDocumentUrl(document){
 		        	var numPages 			= <?php echo getTotalPages($pdfFilePath . $doc . ".pdf") ?>;
-					var url = "{services/view.php?doc={doc}&format={format}&subfolder=<?php echo $subfolder ?>&page=[*,0],{numPages}}";
+					var url = "{services/view.php?doc={doc}&format={format}&subfolder=<?php echo $subfolder; ?>&page=[*,0],{numPages}}";
 						url = url.replace("{doc}",document);
 						url = url.replace("{numPages}",numPages);
 						return url;
