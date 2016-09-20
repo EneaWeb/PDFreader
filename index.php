@@ -13,7 +13,7 @@ if ($id_rivista == '' || $num_rivista == '') {
 ##
 
 try {
-    $dbh = new PDO('mysql:host=localhost;dbname=pdf', 'pdfuser', 'CSv82c_sih5gcsFF');
+    $dbh = new PDO('mysql:host=77.239.137.131:3636;dbname=pdf', 'root', 'Diagonalli872|');
     foreach($dbh->query('SELECT * from pdfs WHERE id_rivista = $id_rivista AND num_rivista = $num_rivista') as $row) {
         print_r($row);
     }
