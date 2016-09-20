@@ -73,7 +73,7 @@ if($configManager->getConfig('admin.password')==null){
 						 key                        : '<?php echo $configManager->getConfig('licensekey') ?>',
 
                          WMode                      : 'transparent',
-  						 localeChain                : 'en_US'
+  						 localeChain                : 'it_IT'
 						 }}
 			    );
 	        </script>
