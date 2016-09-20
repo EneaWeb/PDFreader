@@ -5,7 +5,6 @@ Homestead.json
 Homestead.yaml
 .env
 /r/docs/*
-/r/php/docs/*
 /r/pdf/*
 /r/swftools/*
 /r/php/config/*
