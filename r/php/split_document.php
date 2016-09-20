@@ -104,7 +104,7 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
 						 ZoomTransition : 'easeOut',
 						 ZoomTime : 0.5,
 						 ZoomInterval : 0.1,
-						 FitPageOnLoad : true,
+						 FitPageOnLoad : false,
 						 FitWidthOnLoad : false,
 						 FullScreenAsMaxWindow : true,
 						 ProgressiveLoading : true,
