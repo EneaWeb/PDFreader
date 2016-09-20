@@ -22,6 +22,9 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" />
         <style type="text/css" media="screen">
+
+        		.flowpaper_fisheye {display:none!important;}
+
             html, body  { width:100%; height:100%; }
             body { margin:0; padding:0; overflow:auto; }
 
