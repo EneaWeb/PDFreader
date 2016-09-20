@@ -27,4 +27,4 @@ try {
 }
 //
 
-header("location: /r/php/split_document.php?page=&file=".$filename);
+header("location: /r/php/split_document.php?file=".$filename);
