@@ -10,7 +10,7 @@ if($configManager->getConfig('admin.password')==null){
 	exit;
 }
 
-( $_GET["subfolder"] != NULL && $_GET["subfolder"] != '') {
+if ( $_GET["subfolder"] != NULL && $_GET["subfolder"] != '') {
 	$subfolder = $_GET['subfolder'];
 } else {
 	$subfolder = '';
