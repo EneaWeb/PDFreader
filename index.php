@@ -1,6 +1,6 @@
 <?php
-$id_rivista = isset($_GET['id_rivista']) ? $_GET['id_rivista'] : '';
-$num_rivista = isset($_GET['num_rivista']) ? $_GET['num_rivista'] : '';
+$id_rivista = isset($_GET['i']) ? $_GET['i'] : '';
+$num_rivista = isset($_GET['n']) ? $_GET['n'] : '';
 
 ## 
 ## ERROR 0009
@@ -18,6 +18,6 @@ try {
     }
     $dbh = null;
 } catch (PDOException $e) {
-    print "Error!: " . $e->getMessage() . "<br/>";
-    die();
+   print "Error!: " . $e->getMessage() . "<br/>";
+   die();
 }
