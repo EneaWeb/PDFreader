@@ -15,7 +15,7 @@ if ($id_rivista == '' || $num_rivista == '') {
 try {
     $dbh = new PDO('mysql:host=localhost;dbname=pdf', 'root', 'Diagonalli872|');
     //$q = $dbh->query('INSERT INTO pdfs (id_rivista, num_rivista, name) VALUES ("1344", "5", "HipHopRap_iPad(1).pdf"), ("859", "12", "Speciale_LIGHTROOM.pdf")');
-    foreach($dbh->query('SELECT * from pdfs WHERE id_rivista = $id_rivista AND num_rivista = $num_rivista') as $row) {
+    foreach($dbh->query('SELECT * from pdfs ') as $row) {
         print_r($row);
     }
     $dbh = null;
