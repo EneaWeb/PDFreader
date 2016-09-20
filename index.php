@@ -1,4 +1,5 @@
 <?php
+$anagrafica_utente = isset($_GET['a']) ? $_GET['a'] : '';
 $id_rivista = isset($_GET['i']) ? $_GET['i'] : '';
 $num_rivista = isset($_GET['n']) ? $_GET['n'] : '';
 
