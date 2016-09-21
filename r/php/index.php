@@ -278,7 +278,7 @@ $(function() {
 						<form name="delete" id="delete" action="?" method="POST">
 							<input type="hidden" name="delete_id_rivista" value="<?php echo $row['id_rivista'];?>"/>
 							<input type="hidden" name="delete_num_rivista" value="<?php echo $row['num_rivista'];?>"/>
-							<input type="submit" name="submit" value="Elimina"/>
+							<input type="submit" name="submit" style="padding:4px 10px; margin-top:12px" value="Elimina"/>
 						</form>
 					</td>
 					</tr>
