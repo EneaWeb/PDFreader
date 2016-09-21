@@ -272,7 +272,7 @@ $(function() {
 				foreach($dbh->query("SELECT * from pdfs ORDER BY name") as $row) {
 					?>
 
-					<tr class="" onclick="event.preventDefault(); window.open('split_document.php?subfolder=&doc=<?php echo $row["name"];?>')">
+					<tr class="">
 					<td><?php echo $row['name'];?></td><td><?php echo $row['id_rivista'];?></td><td><?php echo $row['num_rivista'];?></td>
 					<td>
 						<form name="delete" id="delete" action="?" method="POST">
