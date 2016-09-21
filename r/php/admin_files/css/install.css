@@ -1344,7 +1344,6 @@ table.selectable_sortable td.pass { background: #9dc16a !important; }
 
 .unselectedRow {
 	background-color: #efefef;
-    cursor: pointer;
 }
 
 .checkedRow{
