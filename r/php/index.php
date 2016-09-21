@@ -220,7 +220,7 @@
 					<tr class="">
 					<td><?php echo $row['name'];?></td><td><?php echo $row['id_rivista'];?></td><td><?php echo $row['num_rivista'];?></td>
 					<td>
-						<form name="delete" id="delete" action="?" method="POST">
+						<form name="delete" id="delete" action="?" method="POST" onsubmit="return confirm('Sei sicuro di volere cancellare questo record?');">
 							<input type="hidden" name="delete_id_rivista" value="<?php echo $row['id_rivista'];?>"/>
 							<input type="hidden" name="delete_num_rivista" value="<?php echo $row['num_rivista'];?>"/>
 							<input type="submit" name="submit" style="padding:4px 10px; margin-top:12px" value="Elimina"/>
