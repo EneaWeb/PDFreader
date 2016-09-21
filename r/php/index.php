@@ -239,7 +239,7 @@ $(function() {
 						<input type="text" name="num_rivista" />
 					</td>
 					<td>
-						<input type="submit" class="button btn" name="submit" value="Invia"/>
+						<input type="submit" class="button btn" name="submit" style="padding:4px 10px; margin-top:10px" value="Invia"/>
 					</td>
 				</tr>
 			</table>
