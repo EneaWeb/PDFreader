@@ -212,7 +212,7 @@ $(function() {
 			<?php
 			try {
 			    $dbh = new PDO('mysql:host=localhost;dbname=pdf', 'root', 'Diagonalli872|');
-				foreach($dbh->query("SELECT * from pdfs WHERE id_rivista = '$id_rivista' AND num_rivista = '$num_rivista' ") as $row) {
+				foreach($dbh->query("SELECT * from pdfs") as $row) {
 					?>
 
 					<tr>
