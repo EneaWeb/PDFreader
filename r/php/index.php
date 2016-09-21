@@ -174,7 +174,7 @@ $(function() {
 			<div style="float:left;padding-left:120px;"><button class="tiny main n_button" onclick="return window.confirm('Are you sure you want to delete these files?');" type="submit"><span></span><em style="min-width:100px"><img src="admin_files/images/delete.png" style="margin-top:-4px;vertical-align:middle;">&nbsp;Delete</em></button>&nbsp;</div>
 			<div style="clear:both"><br/></div>
 			<!-- <div style="float:left;"><button class="tiny main n_button disabled" id="bttn_view" onclick="window.location.href='simple_document.php';return false; " type="submit"><span></span><em style="min-width:100px">view</em></button>&nbsp;</div><br/>   -->
-				<table width="100%" style="width:880px" cellspacing="0" cellpadding="0" class="selectable_sortable">
+				<table width="100%" style="width:880px" cellspacing="0" cellpadding="0" class="table selectable_sortable">
 				<?php 
 				if ($handle = opendir($configManager->getConfig('path.pdf') . $subFolder)) { 
 					$blacklist = array('.', '..');					
@@ -246,7 +246,7 @@ $(function() {
 
 
 			</form>
-			<table style="width:100%">
+			<table class="table" style="width:100%">
 			<?php
 			try {
 			    $dbh = new PDO('mysql:host=localhost;dbname=pdf', 'root', 'Diagonalli872|');

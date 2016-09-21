@@ -1,7 +1,7 @@
 // JavaScript Document
 $(document).ready(function() {
 var rows=$('table').find('tbody tr').length;
-var no_rec_per_page=5;
+var no_rec_per_page=10;
 var curr_page=1;
 var no_pages= Math.ceil(rows/no_rec_per_page);
 var $pagenumbers=$('<div id="pages"></div>');
@@ -13,7 +13,7 @@ for(i=0;i<no_pages;i++)
 	 	$('<span class="page">'+(i+1)+'</span>').appendTo($pagenumbers);
 }
 
-$pagenumbers.insertAfter('table');
+$pagenumbers.insertAfter('table.table');
 $('.page').hover(
 function(){
 $(this).addClass('hover');
