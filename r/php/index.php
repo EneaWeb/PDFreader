@@ -239,7 +239,7 @@ $(function() {
 						<input type="text" name="num_rivista" />
 					</td>
 					<td>
-						<input type="submit" class="button btn" name="submit" style="padding:4px 10px; margin-top:10px" value="Invia"/>
+						<input type="submit" class="button btn" name="submit" style="padding:4px 10px; margin-top:12px" value="Invia"/>
 					</td>
 				</tr>
 			</table>
@@ -254,7 +254,7 @@ $(function() {
 				foreach($dbh->query("SELECT * from pdfs") as $row) {
 					?>
 
-					<tr class="unselectedRow folder" onclick="event.preventDefault(); window.open('split_document.php?subfolder=&doc=<?php echo $row["name"];?>')">
+					<tr class="" onclick="event.preventDefault(); window.open('split_document.php?subfolder=&doc=<?php echo $row["name"];?>')">
 					<td><?php echo $row['name'];?></td><td><?php echo $row['id_rivista'];?></td><td><?php echo $row['num_rivista'];?></td>
 					</tr>
 
