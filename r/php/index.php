@@ -10,8 +10,24 @@
 	require_once("lib/common.php");
 	$configManager = new Config();
 
-	if (isset($_POST['new']) && isset($_POST['id_rivista']) && isset($_POST['num_rivista']) ) {
+	if (isset($_POST['filename']) && isset($_POST['id_rivista']) && isset($_POST['num_rivista']) ) {
+		if ($_POST['filename'] != '' && $_POST['id_rivista'] != '' && $_POST['num_rivista'] != '') {
 
+			$name = $_POST['filename'];
+			$id_rivista = $_POST['id_rivista'];
+			$num_rivista = $_POST['num_rivista'];
+
+			try {
+			   $dbh = new PDO('mysql:host=localhost;dbname=pdf', 'root', 'Diagonalli872|');
+			   $dbh->query("INSERT INTO pdfs (name, id_rivista, num_rivista) VALUES ('$name', '$id_rivista', '$num_rivista')");
+				$dbh = null;
+			} catch (PDOException $e) {
+			   print "Error!: " . $e->getMessage() . "<br/>";
+			   die();
+			}
+
+			header("location: index.php");
+		}
 	}
 
 	
