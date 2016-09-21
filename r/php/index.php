@@ -215,7 +215,7 @@ $(function() {
 				foreach($dbh->query("SELECT * from pdfs") as $row) {
 					?>
 
-					<tr class="unselectedRow folder" onclick="event.preventDefault(); window.open='split_document.php?subfolder=&doc=<?php echo $row["name"];?>'">
+					<tr class="unselectedRow folder" onclick="event.preventDefault(); window.open('split_document.php?subfolder=&doc=<?php echo $row["name"];?>')">
 					<td><?php echo $row['name'];?></td><td><?php echo $row['id_rivista'];?></td><td><?php echo $row['num_rivista'];?></td>
 					</tr>
 
