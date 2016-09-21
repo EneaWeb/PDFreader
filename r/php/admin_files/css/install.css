@@ -173,7 +173,6 @@ ul.menu li, ol.menu li {
 	display:inline-block;
 	zoom:1;
 *display:inline;
-	cursor:pointer;
 	background:none;
 	white-space:nowrap;
 }
