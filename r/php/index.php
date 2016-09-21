@@ -269,7 +269,7 @@ $(function() {
 			<?php
 			try {
 			    $dbh = new PDO('mysql:host=localhost;dbname=pdf', 'root', 'Diagonalli872|');
-				foreach($dbh->query("SELECT * from pdfs") as $row) {
+				foreach($dbh->query("SELECT * from pdfs ORDER BY name") as $row) {
 					?>
 
 					<tr class="" onclick="event.preventDefault(); window.open('split_document.php?subfolder=&doc=<?php echo $row["name"];?>')">
