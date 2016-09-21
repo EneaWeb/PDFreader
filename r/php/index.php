@@ -238,6 +238,9 @@ $(function() {
 						NUM rivista:<br>
 						<input type="text" name="num_rivista" />
 					</td>
+					<td>
+						<input type="submit" name="submit" value="Invia"/>
+					</td>
 				</tr>
 			</table>
 
