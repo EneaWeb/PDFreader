@@ -160,7 +160,7 @@
 							<th class="title" style="width:15px"><input type="checkbox" id="pdfFile" name="pdfFile[]" value="<?php echo "$file"; ?>" class="fileCheckBox"></th>
 							<td class="tr" style="text-align:left;"><?php echo "$file"; ?></td>
 							<td class="tr" style="text-align:left;"><?php echo filesize($configManager->getConfig('path.pdf') . $subFolder . $file)?>&nbsp;bytes</td>
-							<td class="tr" style="text-align:left"><a href="/r/php/split_document.php?doc=<?php echo $file;?>">VISUALIZZA</a></td>
+							<td class="tr" style="text-align:left"><a href="/r/php/split_document.php?doc=<?php echo $file;?>" target="_blank">VISUALIZZA</a></td>
 						</tr>
 						<?php } ?>
 					<?php } ?>
