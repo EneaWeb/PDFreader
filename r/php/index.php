@@ -246,8 +246,7 @@ $(function() {
 
 
 			</form>
-			<table>
-			<tr><th>Nome file</th><th>ID rivista</th><th>Num rivista</th></tr>
+			<table style="width:100%">
 			<?php
 			try {
 			    $dbh = new PDO('mysql:host=localhost;dbname=pdf', 'root', 'Diagonalli872|');
