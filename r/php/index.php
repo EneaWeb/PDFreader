@@ -30,6 +30,25 @@
 		}
 	}
 
+	if (isset($_POST['delete_id_rivista']) && isset($_POST['delete_num_rivista']) ) {
+		if ($_POST['delete_id_rivista'] != '' && $_POST['delete_num_rivista'] != '') {
+
+			$id_rivista = $_POST['delete_id_rivista'];
+			$num_rivista = $_POST['delete_num_rivista'];
+
+			try {
+			   $dbh = new PDO('mysql:host=localhost;dbname=pdf', 'root', 'Diagonalli872|');
+			   $dbh->query("DELETE FROM pdfs WHERE id_rivista='$id_rivista' AND num_rivista='$num_rivista'");
+				$dbh = null;
+			} catch (PDOException $e) {
+			   print "Error!: " . $e->getMessage() . "<br/>";
+			   die();
+			}
+
+			header("location: index.php");
+		}
+	}
+
 	
 	if($configManager->getConfig('admin.password')==null){
 		$url = 'setup.php';
@@ -255,6 +274,13 @@ $(function() {
 
 					<tr class="" onclick="event.preventDefault(); window.open('split_document.php?subfolder=&doc=<?php echo $row["name"];?>')">
 					<td><?php echo $row['name'];?></td><td><?php echo $row['id_rivista'];?></td><td><?php echo $row['num_rivista'];?></td>
+					<td>
+						<form name="delete" id="delete" action="?" method="POST">
+							<input type="hidden" name="delete_id_rivista" value="<?php echo $row['id_rivista'];?>"/>
+							<input type="hidden" name="delete_num_rivista" value="<?php echo $row['num_rivista'];?>"/>
+							Elimina
+						</form>
+					</td>
 					</tr>
 
 					<?php
