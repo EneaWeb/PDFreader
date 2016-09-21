@@ -129,7 +129,7 @@
 			<form action="index.php" method="post" enctype="multipart/form-data">
 			<div style="float:left;position:absolute;">
 			    <div style="position:absolute;left:0px;top:0px;">
-                    <input class="file-upload" type="file" name="Filedata" id="Filedata" style="width:115px;font-size: 30px;opacity:0;cursor: pointer;position:absolute;left:0;top:0;" />
+                    <input class="file-upload" type="file" name="Filedata" id="Filedata" style="width:115px;font-size: 30px;opacity:0;position:absolute;left:0;top:0;" />
                     <button class="tiny main n_button" type="submit" onclick="return false;" style="pointer-events:none;"><span></span><em style="min-width:100px"><input type="hidden" name="Filename" id="Filename" value="" /><img src="admin_files/images/upload.png" style="padding-top:2px;">&nbsp;Upload</em></button>
                     &nbsp;<br/>
                 </div><div style="position:absolute;left:0px;top:0px;"><div id="file_upload" type="button"></div></div>
