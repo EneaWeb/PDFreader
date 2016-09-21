@@ -9,6 +9,11 @@
 	require_once("lib/config.php");
 	require_once("lib/common.php");
 	$configManager = new Config();
+
+	if (isset($_POST['new']) && isset($_POST['id_rivista']) && isset($_POST['num_rivista']) ) {
+
+	}
+
 	
 	if($configManager->getConfig('admin.password')==null){
 		$url = 'setup.php';
@@ -136,11 +141,11 @@ $(function() {
 </script> 
 <script type="text/javascript" src="admin_files/js/pagination.js"></script>
 		<div style="width:690px;clear:both;padding: 20px 10px 20px 10px;">
-			<button class="tiny main n_button" type="submit"  onclick="location.href='change_config.php'"><span></span><em style="min-width:150px"><img src="http://flowpaper.com/static/icon16_configuration.gif" style="padding-top:2px;">&nbsp;Configuration</em></button>&nbsp;
+			<button class="tiny main n_button" type="submit"  onclick="location.href='change_config.php'"><span></span><em style="min-width:150px">&nbsp;Opzioni: NON TOCCARE!</em></button>&nbsp;
 		</div>
 		
 		<div style="clear:both;background-color:#fff;padding: 20px 10px 20px 30px;border:0px;-webkit-box-shadow: rgba(0, 0, 0, 0.246094) 0px 4px 8px 0px;min-width:900px;float:left;width:900px;margin-left:10px;margin-bottom:50px;">
-			<h3>Available Documents</h3>
+			<h3>Documenti caricati</h3>
 			<form action="index.php" method="post" enctype="multipart/form-data">
 			<div style="float:left;position:absolute;">
 			    <div style="position:absolute;left:0px;top:0px;">
@@ -198,5 +203,33 @@ $(function() {
 				</div>
 			<?php } ?>
 		</div>
+
+		<div style="clear:both;background-color:#fff;padding: 20px 10px 20px 30px;border:0px;-webkit-box-shadow: rgba(0, 0, 0, 0.246094) 0px 4px 8px 0px;min-width:900px;float:left;width:900px;margin-left:10px;margin-bottom:50px;">
+			<h3>Documenti registrati</h3>
+			
+			<table>
+			<tr><th>Nome file</th><th>ID rivista</th><th>Num rivista</th></tr>
+			<?php
+			try {
+			    $dbh = new PDO('mysql:host=localhost;dbname=pdf', 'root', 'Diagonalli872|');
+				foreach($dbh->query("SELECT * from pdfs WHERE id_rivista = '$id_rivista' AND num_rivista = '$num_rivista' ") as $row) {
+					?>
+
+					<tr>
+					<td><?php echo $row['name'];?></td><td><?php echo $row['id_rivista'];?></td><td><?php echo $row['num_rivista'];?></td>
+					</tr>
+
+					<?php
+				}
+				$dbh = null;
+			} catch (PDOException $e) {
+			   print "Error!: " . $e->getMessage() . "<br/>";
+			   die();
+			}
+			?>
+			</table>
+
+		</div>
+
 <?php } ?>		
 <?php require_once("admin_files/footer.php"); ?>	
