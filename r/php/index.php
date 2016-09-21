@@ -223,6 +223,26 @@ $(function() {
 		<div style="clear:both;background-color:#fff;padding: 20px 10px 20px 30px;border:0px;-webkit-box-shadow: rgba(0, 0, 0, 0.246094) 0px 4px 8px 0px;min-width:900px;float:left;width:900px;margin-left:10px;margin-bottom:50px;">
 			<h3>Documenti registrati</h3>
 			
+			<form name="create" id="create" action="?" method="POST">
+				<table>
+				<tr>
+					<td>
+						Nome del file:<br>
+						<input type="text" name="filename" />
+					</td>
+					<td>
+						ID rivista:<br>
+						<input type="text" name="id_rivista" />
+					</td>
+					<td>
+						NUM rivista:<br>
+						<input type="text" name="num_rivista" />
+					</td>
+				</tr>
+			</table>
+
+
+			</form>
 			<table>
 			<tr><th>Nome file</th><th>ID rivista</th><th>Num rivista</th></tr>
 			<?php
