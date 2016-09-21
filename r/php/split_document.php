@@ -22,7 +22,6 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" />
         <style type="text/css" media="screen">
-
  
 
             html, body  { width:100%; height:100%; }
@@ -106,13 +105,13 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
 						 Scale : 0.6,
 						 ZoomTransition : 'easeOut',
 						 ZoomTime : 0.5,
-						 ZoomInterval : 0.1,
+						 ZoomInterval : 0.2,
 						 FitPageOnLoad : true,
 						 FitWidthOnLoad : false,
 						 FullScreenAsMaxWindow : false,
 						 ProgressiveLoading : false,
-						 MinZoomSize : 0.2,
-						 MaxZoomSize : 5,
+						 MinZoomSize : 0.1,
+						 MaxZoomSize : 7,
 						 SearchMatchAll : false,
   						 SearchServiceUrl : searchServiceUrl,
 						 InitViewMode : '',
