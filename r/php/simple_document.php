@@ -31,6 +31,60 @@ if($configManager->getConfig('admin.password')==null){
         <!--<![endif]-->
 		<script type="text/javascript" src="js/flowpaper.js"></script>
 		<script type="text/javascript" src="js/flowpaper_handlers.js"></script>
+<script type="text/javascript"> 
+$(function() {
+      $('table tbody tr').mouseover(function() {
+	  	 $(this).removeClass('checkedRow')
+	  	 $(this).removeClass('unselectedRow');
+         $(this).addClass('selectedRow');
+      }).mouseout(function() {
+	  	 if ($('input:first', this).attr('checked') == 'checked') {
+		 	$(this).removeClass('selectedRow');
+		 	$(this).addClass('checkedRow');
+		 }
+		 else {
+		 	$(this).removeClass('selectedRow');
+		 	$(this).addClass('unselectedRow');
+			$(this).removeClass('checkedRow');
+		 }
+      }).click(function(event){
+      	if(jQuery(event.target).hasClass('folder')){return;}
+      	
+      	 var tagName = (event && event.target)?event.target.tagName:window.event.srcElement.tagName;
+		 if(tagName != 'INPUT' && !jQuery(event.target).hasClass('title')){
+			<?php if(!$configManager->getConfig('splitmode') || $configManager->getConfig('splitmode') == "false"){ ?>
+            var newWindow = window.open('simple_document.php?subfolder=<?php echo $subFolder ?>&doc='+ $('input:first', this).val(),'open_window','menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=640, height=480, left=0, top=0');
+            <?php }else{ ?>
+            var newWindow = window.open('split_document.php?subfolder=<?php echo $subFolder ?>&doc='+ $('input:first', this).val(),'open_window','menubar, toolbar, location, directories, status, scrollbars, resizable, dependent, width=640, height=480, left=0, top=0');
+            <?php } ?>
+      	 }else{
+			if(tagName != 'INPUT')
+				$('input:first', this).prop("checked", !($('input:first', this).attr('checked') == 'checked'));
+		}
+      });
+      
+      
+      $('.file-upload').fileUpload(
+		{
+			url: 'admin_files/controls/uploadify.php',
+			type: 'POST',
+			dataType: 'json',
+			beforeSend: function () {
+				jQuery('#Filename').val(jQuery('#Filedata').val().substr(jQuery('#Filedata').val().lastIndexOf("\\")+1));
+			},
+			complete: function () {
+			},
+			success: function (result, status, xhr) {
+				if(result=='0'){
+					alert('Unable to upload file. Please verify your server directory permissions.');
+				}else{
+					window.location.reload(true);
+				}
+			}
+		}
+	);
+   });
+</script> 
     </head>
     <body>
 		<div id="documentViewer" class="flowpaper_viewer" style="position:absolute;left:10px;top:10px;width:770px;height:500px"></div>
