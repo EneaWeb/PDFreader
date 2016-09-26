@@ -13,8 +13,7 @@ if (isset($_POST['id_anagrafica']) && $_POST['doc'] != '') {
 
 	$txt = '/media/pdf/r/php/pdf/temp/'.$id_anagrafica.'.txt';
 	exec("rm -rf ".$txt);
-	exec("umask 777");
-	exec("touch ".$txt);
+	exec("touch ".$txt."; chmod 777 ".$txt);
 	exec("echo ".$id_anagrafica." >> ".$txt);
 	exec("CHMOD 0777 /media/pdf/r/php/pdf/temp/".$id_anagrafica.".txt");
 	exec("paps --left-margin 1 top-margin 0 /media/pdf/r/php/pdf/temp/".$id_anagrafica.".txt | ps2pdf -dEPSCrop - /media/pdf/r/php/pdf/temp/".$id_anagrafica.".pdf");
