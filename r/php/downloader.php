@@ -9,7 +9,8 @@ if (isset($_POST['id_anagrafica']) && $_POST['doc'] != '') {
 	$doc = $_POST['doc'];
 	$id_anagrafica = $_POST['id_anagrafica'];
 
-	$file = "/media/pdf/r/php/pdf/temp/".$id_anagrafica."-".$doc."";
+	$new_filename = $id_anagrafica."-".$doc."";
+	$file = "/media/pdf/r/php/pdf/temp/".$new_filename;
 
 	$txt = '/media/pdf/r/php/pdf/temp/'.$id_anagrafica.'.txt';
 	exec("rm -rf ".$txt);
@@ -19,7 +20,11 @@ if (isset($_POST['id_anagrafica']) && $_POST['doc'] != '') {
 	exec("paps --left-margin 1 --top-margin 0 /media/pdf/r/php/pdf/temp/".$id_anagrafica.".txt | ps2pdf -dEPSCrop - /media/pdf/r/php/pdf/temp/".$id_anagrafica.".pdf");
 	exec("pdftk /media/pdf/r/php/pdf/".$doc." stamp /media/pdf/r/php/pdf/temp/".$id_anagrafica.".pdf output ".$file."");
 
-	echo $file;
+	// $file = location on filesystem
+	// $file_public = location public
+
+	$file_public = 'http://pdf.sprea.it/r/php/pdf/temp/'.$new_filename;
+	echo $file_public;
 } 
 
 exit();
