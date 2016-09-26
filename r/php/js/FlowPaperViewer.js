@@ -4111,7 +4111,7 @@ function ia(f, c) {
                     data: { id_anagrafica: id_anagrafica, doc: doc }
                 })
                 .done(function( msg ) {
-                    window.open(''+msg+'','_blank');
+                    alert(msg);
                 });
             return !1;
             // FINE CUSTOM EXPORT
