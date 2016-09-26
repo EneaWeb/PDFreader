@@ -84,6 +84,7 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
     </head>
     <body>
 			<div id="documentViewer" class="flowpaper_viewer" style="position:absolute;left:0;top:0;width:100%;height:100%"></div>
+			<div id="id_anagrafica"></div>
 	        <?php
 	        if(isset($_GET["doc"])){
 	            $doc = substr($_GET["doc"],0,strlen($_GET["doc"])-4);
@@ -93,15 +94,19 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
 
 			$pdfFilePath = $configManager->getConfig('path.pdf') . $subfolder;
 			?>
-	        <script type="text/javascript">
-	        
-		        function getDocumentUrl(document){
-		        	var numPages 			= <?php echo getTotalPages($pdfFilePath . $doc . ".pdf") ?>;
-					var url = "{services/view.php?doc={doc}&format={format}&subfolder=<?php echo $subfolder; ?>&page=[*,0],{numPages}}";
-						url = url.replace("{doc}",document);
-						url = url.replace("{numPages}",numPages);
-						return url;
-		        }
+	        	<script type="text/javascript">
+
+					$(document).ready(function(){
+					  	$('#id_anagrafica').html("<?php echo $_GET['a'];?>");
+					})
+
+		        	function getDocumentUrl(document){
+			        	var numPages 			= <?php echo getTotalPages($pdfFilePath . $doc . ".pdf") ?>;
+						var url = "{services/view.php?doc={doc}&format={format}&subfolder=<?php echo $subfolder; ?>&page=[*,0],{numPages}}";
+							url = url.replace("{doc}",document);
+							url = url.replace("{numPages}",numPages);
+							return url;
+		        	}
 
 				var searchServiceUrl	= escape('services/containstext.php?doc=<?php echo $doc ?>&page=[page]&searchterm=[searchterm]');
 				$('#documentViewer').FlowPaperViewer(

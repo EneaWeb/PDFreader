@@ -6,7 +6,7 @@ $filename = isset($_GET['n']) ? $_GET['n'] : '';
 ## 
 ## ERROR 0009
 ##
-if ($filename == '') {
+if ($filename == '' || $anagrafica_utente == '') {
 	echo 'Accesso negato.';
 	exit();
 }
@@ -29,4 +29,4 @@ try {
 //
 */
 
-header("location: /r/php/split_document.php?doc=".$filename);
+header("location: /r/php/split_document.php?doc=".$filename."&a=".$anagrafica_utente."&i=".$id_rivista."");

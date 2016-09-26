@@ -4096,9 +4096,17 @@ function ia(f, c) {
                 minHeight: 255,
                 appendTo: c.aa.ka
             }), jQuery("#modal-print").parent().css("background-color", "#dedede"));
-        }), jQuery(c.ea).find(".flowpaper_bttnDownload").bind("click", function() {
+        }), /*
+            jQuery(c.ea).find(".flowpaper_bttnDownload").bind("click", function() {
             window.zine ? (window.open(FLOWPAPER.yj(c.document.PDFFile, c.aa.getCurrPage()), "windowname3", null), 0 < c.document.PDFFile.indexOf("[*,") && -1 == c.document.PDFFile.indexOf("[*,2,true]") && 1 < c.aa.getTotalPages() && 1 < c.aa.getCurrPage() && window.open(FLOWPAPER.yj(c.document.PDFFile, c.aa.getCurrPage() - 1), "windowname4", null)) : window.open(FLOWPAPER.yj(c.document.PDFFile, c.aa.getCurrPage()), "windowname4", null);
             return !1;
+            */
+            // INIZIO CUSTOM EXPORT PDF SAVE
+            jQuery(c.ea).find(".flowpaper_bttnDownload").bind("click", function() {
+                var id_anagrafica = jQuery('#id_anagrafica').text();
+                alert(id_anagrafica);
+            return !1;
+            // FINE CUSTOM EXPORT
         }), jQuery(c.ea).find(".flowpaper_bttnOutline").bind("click", function() {
             c.aa.hn();
         }), jQuery(c.ea).find(".flowpaper_bttnPrevPage").bind("click", function() {
