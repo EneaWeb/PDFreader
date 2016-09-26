@@ -6,7 +6,7 @@ $filename = isset($_GET['n']) ? $_GET['n'] : '';
 ## 
 ## ERROR 0009
 ##
-if ($num_rivista == '') {
+if ($filename == '') {
 	echo 'Accesso negato.';
 	exit();
 }
