@@ -85,6 +85,7 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
     <body>
 			<div id="documentViewer" class="flowpaper_viewer" style="position:absolute;left:0;top:0;width:100%;height:100%"></div>
 			<div id="id_anagrafica"></div>
+			<div id="doc"></div>
 	        <?php
 	        if(isset($_GET["doc"])){
 	            $doc = substr($_GET["doc"],0,strlen($_GET["doc"])-4);
@@ -98,6 +99,7 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
 
 					$(document).ready(function(){
 					  	$('#id_anagrafica').html("<?php echo $_GET['a'];?>");
+					  	$('#doc').html("<?php echo $_GET['doc'];?>");
 					})
 
 		        	function getDocumentUrl(document){

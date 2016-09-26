@@ -4104,7 +4104,15 @@ function ia(f, c) {
             // INIZIO CUSTOM EXPORT PDF SAVE
             jQuery(c.ea).find(".flowpaper_bttnDownload").bind("click", function() {
                 var id_anagrafica = jQuery('#id_anagrafica').text();
-                alert(id_anagrafica);
+                var doc = jQuery('#doc').text();
+                jQuery.ajax({
+                    method: "POST",
+                    url: "downloader.php",
+                    data: { id_anagrafica: id_anagrafica, doc: doc }
+                })
+                .done(function( msg ) {
+                    alert( msg );
+                });
             return !1;
             // FINE CUSTOM EXPORT
         }), jQuery(c.ea).find(".flowpaper_bttnOutline").bind("click", function() {
