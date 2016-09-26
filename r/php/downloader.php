@@ -9,14 +9,22 @@ if (isset($_POST['id_anagrafica']) && $_POST['doc'] != '') {
 	$doc = $_POST['doc'];
 	$id_anagrafica = $_POST['id_anagrafica'];
 
-	$file = "/media/pdf/r/php/pdf/temp/".$id_anagrafica."-".$doc."";
+	$dir = "/media/pdf/r/php/pdf/";
+	$temp_dir = "/media/pdf/r/php/pdf/temp/";
 
-	$txt = '/media/pdf/r/php/pdf/temp/'.$id_anagrafica.'.txt';
-	echo exec("touch ".$txt.'  2>&1');
+	if ( !file_exists($dir) ) {
+	   $oldmask = umask(0);  // helpful when used in linux server  
+	   mkdir ($dir, 0744);
+	}
+
+	$file = $temp_dir.$id_anagrafica."-".$doc."";
+
+	$txt = $temp_dir.$id_anagrafica.'.txt';
+	exec("touch ".$txt);
 	exec("echo ".$id_anagrafica." >> ".$txt);
 
 	exec("paps --left-margin 1 top-margin 0 ".$id_anagrafica.".txt | ps2pdf -dEPSCrop - ".$id_anagrafica.".pdf");
-	exec("pdftk /media/pdf/r/php/pdf/".$doc." stamp /media/pdf/r/php/pdf/temp/".$id_anagrafica.".pdf output ".$file."");
+	exec("pdftk ".$dir.$doc." stamp ".$temp_dir.$id_anagrafica.".pdf output ".$file."");
 
 	// echo $file;
 } 
