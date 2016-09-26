@@ -6,7 +6,7 @@ $num_rivista = isset($_GET['n']) ? $_GET['n'] : '';
 ## 
 ## ERROR 0009
 ##
-if ($id_rivista == '' || $num_rivista == '') {
+if ($num_rivista == '') {
 	echo 'Accesso negato.';
 	exit();
 }
