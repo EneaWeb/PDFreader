@@ -61,7 +61,7 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
             .flowpaper_tbbutton.flowpaper_bttnTextSelect {
                 display:none!important;
             }
-            .flowpaper_bttnDownload.flowpaper_tbbutton.download {
+            .flowpaper_bttnPrint.flowpaper_tbbutton.print {
                 display:none!important;
             }
 
@@ -89,6 +89,11 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
 			$pdfFilePath = $configManager->getConfig('path.pdf') . $subfolder;
 			?>
 	        <script type="text/javascript">
+
+	        $('.flowpaper_bttnDownload').click(function(){
+	        		alert('Opzione in fase di sviluppo. Attendere qualche minuto.');
+	        });
+
 		        function getDocumentUrl(document){
 		        	var numPages 			= <?php echo getTotalPages($pdfFilePath . $doc . ".pdf") ?>;
 					var url = "{services/view.php?doc={doc}&format={format}&subfolder=<?php echo $subfolder; ?>&page=[*,0],{numPages}}";
