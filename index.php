@@ -1,7 +1,7 @@
 <?php
 $anagrafica_utente = isset($_GET['a']) ? $_GET['a'] : '';
 $id_rivista = isset($_GET['i']) ? $_GET['i'] : '';
-$num_rivista = isset($_GET['n']) ? $_GET['n'] : '';
+$filename = isset($_GET['n']) ? $_GET['n'] : '';
 
 ## 
 ## ERROR 0009
@@ -13,6 +13,7 @@ if ($num_rivista == '') {
 ##
 
 // GET FILENAME FROM DATABASE WITH DATA
+/*
 try {
     $dbh = new PDO('mysql:host=localhost;dbname=pdf', 'root', 'Diagonalli872|');
     //$q = $dbh->query('TRUNCATE TABLE pdfs');
@@ -26,5 +27,6 @@ try {
    die();
 }
 //
+*/
 
 header("location: /r/php/split_document.php?doc=".$filename);
