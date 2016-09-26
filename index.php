@@ -7,7 +7,7 @@ $num_rivista = isset($_GET['n']) ? $_GET['n'] : '';
 ## ERROR 0009
 ##
 if ($id_rivista == '' || $num_rivista == '') {
-	echo 'Errore 0009. Valori inesistenti.';
+	echo 'Accesso negato.';
 	exit();
 }
 ##
