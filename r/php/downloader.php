@@ -12,11 +12,6 @@ if (isset($_POST['id_anagrafica']) && $_POST['doc'] != '') {
 	$dir = "/media/pdf/r/php/pdf/";
 	$temp_dir = "/media/pdf/r/php/pdf/temp/";
 
-	if ( !file_exists($dir) ) {
-	   $oldmask = umask(0);  // helpful when used in linux server  
-	   mkdir ($temp_dir, 0744);
-	}
-
 	$file = $temp_dir.$id_anagrafica."-".$doc."";
 
 	$txt = $temp_dir.$id_anagrafica.'.txt';
