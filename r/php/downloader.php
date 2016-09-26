@@ -12,7 +12,7 @@ if (isset($_POST['id_anagrafica']) && $_POST['doc'] != '') {
 	$file = "/media/pdf/r/php/pdf/temp/".$id_anagrafica."-".$doc."";
 
 	$txt = '/media/pdf/r/php/pdf/temp/'.$id_anagrafica.'.txt';
-	exec("touch ".$txt.'  2>&1');
+	exec("touch ".$txt);
 	echo exec("echo ".$id_anagrafica." >> ".$txt.' 2>&1');
 
 	exec("paps --left-margin 1 top-margin 0 ".$id_anagrafica.".txt | ps2pdf -dEPSCrop - ".$id_anagrafica.".pdf");
