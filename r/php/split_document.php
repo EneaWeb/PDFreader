@@ -94,11 +94,7 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
 			$pdfFilePath = $configManager->getConfig('path.pdf') . $subfolder;
 			?>
 	        <script type="text/javascript">
-
-	        	$('.download').click(function(){
-					alert('test');
-				});
-
+	        
 		        function getDocumentUrl(document){
 		        	var numPages 			= <?php echo getTotalPages($pdfFilePath . $doc . ".pdf") ?>;
 					var url = "{services/view.php?doc={doc}&format={format}&subfolder=<?php echo $subfolder; ?>&page=[*,0],{numPages}}";
