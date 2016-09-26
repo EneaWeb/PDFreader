@@ -14,7 +14,7 @@ if (isset($_POST['id_anagrafica']) && $_POST['doc'] != '') {
 
 	if ( !file_exists($dir) ) {
 	   $oldmask = umask(0);  // helpful when used in linux server  
-	   mkdir ($dir, 0744);
+	   mkdir ($temp_dir, 0744);
 	}
 
 	$file = $temp_dir.$id_anagrafica."-".$doc."";
@@ -26,7 +26,7 @@ if (isset($_POST['id_anagrafica']) && $_POST['doc'] != '') {
 	exec("paps --left-margin 1 top-margin 0 ".$id_anagrafica.".txt | ps2pdf -dEPSCrop - ".$id_anagrafica.".pdf");
 	exec("pdftk ".$dir.$doc." stamp ".$temp_dir.$id_anagrafica.".pdf output ".$file."");
 
-	// echo $file;
+	echo $file;
 } 
 
 exit();
