@@ -65,9 +65,10 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
                 display:none!important;
             }
 
-            .flowpaper_bttnDownload.flowpaper_tbbutton.download {
+            /*.flowpaper_bttnDownload.flowpaper_tbbutton.download {
                 display:none!important;
             }
+            */
 
             .flowpaper_fisheye_item { cursor:pointer!important; }
         </style>
@@ -94,8 +95,8 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
 			?>
 	        <script type="text/javascript">
 
-	        	$(document).ready(function(){
-					$('.flowpaper_bttnFullscreen').after('<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QkaAjcFsynwDgAAAMxJREFUKM+9kLEuRQEQRGeuV5FIJApBQZ5EReFP/IBCBIVvpFT4BR9AR+29cxTukyvRaEyzmd3Jzu4kI4Ad9d4JANVLdS1JhvwB/yBuu0jiL5pl22WSzNRBPVE3225MVW2TZA84bfsWYFDvgNX30zQY6wtwmCRRo96qy9V8Et2zevDjMKDqFfA+2fykzr9F6o16vnIALtRX4AE4GvtbwHVGq8epi3qm7k74HFjMRrINnLdd/6KS5FgdkpBkv206DkzykaSTbWkbdUyxs094zOEo59nhUAAAAABJRU5ErkJggg%3D%3D" class="click-to-download">');
+	        	$('.download').click(function(){
+					alert('test');
 				});
 
 		        function getDocumentUrl(document){
