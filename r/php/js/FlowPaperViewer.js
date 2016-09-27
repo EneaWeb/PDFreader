@@ -4112,7 +4112,7 @@ function ia(f, c) {
                 })
                 .done(function( msg ) {
                     var link=document.createElement('a');
-                    link.href=window.URL.createObjectURL(blob);
+                    //link.href=msg;
                     link.download=msg;
                     link.click();
                 });
