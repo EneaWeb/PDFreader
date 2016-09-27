@@ -11,10 +11,4 @@ Homestead.yaml
 /r/php/pdf/*
 /r/php/docs/*
 /r/php/pdf/temp/*
-/test/docs/*
-/test/pdf/*
-/test/swftools/*
-/test/php/config/*
-/test/php/pdf/*
-/test/php/docs/*
-/test/php/pdf/temp/*
+/test/*
