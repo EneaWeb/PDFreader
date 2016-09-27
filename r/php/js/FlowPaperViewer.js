@@ -4113,7 +4113,7 @@ function ia(f, c) {
                 .done(function( msg ) {
                     var link=document.createElement('a');
                     link.href=msg;
-                    link.download=msg;
+                    link.download=doc;
                     link.click();
                 });
             return !1;
