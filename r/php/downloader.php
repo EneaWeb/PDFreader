@@ -24,7 +24,19 @@ if (isset($_POST['id_anagrafica']) && $_POST['doc'] != '') {
 	// $file_public = location public
 
 	$file_public = 'http://pdf.sprea.it/r/php/pdf/temp/'.$new_filename;
-	echo $file_public;
+	//echo $file_public;
+
+	//file_get_contents is standard function
+	$content = file_get_contents($file_public);
+	header('Content-Type: application/pdf');
+	header('Content-Length: '.strlen( $content ));
+	header('Content-disposition: inline; filename="' . $file_public . '"');
+	header('Cache-Control: public, must-revalidate, max-age=0');
+	header('Pragma: public');
+	header('Expires: Sat, 26 Jul 1997 05:00:00 GMT');
+	header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');
+	echo $content;
+
 } 
 
 exit();
