@@ -2,11 +2,12 @@
 $anagrafica_utente = isset($_GET['a']) ? $_GET['a'] : '';
 $id_rivista = isset($_GET['i']) ? $_GET['i'] : '';
 $filename = isset($_GET['n']) ? $_GET['n'] : '';
+$original_filename = isset($_GET['0']) ? $_GET['0'] : '';
 
 ## 
 ## ERROR 0009
 ##
-if ($filename == '' || $anagrafica_utente == '') {
+if ($filename == '' || $anagrafica_utente == '' || $original_filename == '') {
 	echo 'Accesso negato.';
 	exit();
 }
@@ -29,4 +30,4 @@ try {
 //
 */
 
-header("location: /r/php/split_document.php?doc=".$filename."&a=".$anagrafica_utente."&i=".$id_rivista."");
+header("location: /r/php/split_document.php?doc=".$filename."&a=".$anagrafica_utente."&i=".$id_rivista."&o=".$original_filename."");
