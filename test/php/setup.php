@@ -1,6 +1,7 @@
 <?php
-	session_start();
-	
+	if(!isset($_SESSION)) {
+		session_start();
+	}
 	require_once("lib/config.php");
 	require_once("lib/common.php");
 	$configManager = new Config();
