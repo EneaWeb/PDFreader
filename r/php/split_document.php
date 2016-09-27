@@ -84,8 +84,9 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
     </head>
     <body>
 			<div id="documentViewer" class="flowpaper_viewer" style="position:absolute;left:0;top:0;width:100%;height:100%"></div>
-			<div id="id_anagrafica" style="display:none"></div>
-			<div id="doc" style="display:none"></div>
+			<div id="id_anagrafica" style="display:none"><?php echo $_GET['a'];?></div>
+			<div id="original_name" style="display:none"><?php echo $_GET['o'];?></div>
+			<div id="doc" style="display:none"><?php echo $_GET['doc'];?></div>
 	        <?php
 	        if(isset($_GET["doc"])){
 	            $doc = substr($_GET["doc"],0,strlen($_GET["doc"])-4);
@@ -96,12 +97,7 @@ if ( isset($_GET["subfolder"]) && $_GET["subfolder"] != '') {
 			$pdfFilePath = $configManager->getConfig('path.pdf') . $subfolder;
 			?>
 	        	<script type="text/javascript">
-
-					$(document).ready(function(){
-					  	$('#id_anagrafica').html("<?php echo $_GET['a'];?>");
-					  	$('#doc').html("<?php echo $_GET['doc'];?>");
-					})
-
+	        	
 		        	function getDocumentUrl(document){
 			        	var numPages 			= <?php echo getTotalPages($pdfFilePath . $doc . ".pdf") ?>;
 						var url = "{services/view.php?doc={doc}&format={format}&subfolder=<?php echo $subfolder; ?>&page=[*,0],{numPages}}";

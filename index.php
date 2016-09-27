@@ -2,7 +2,7 @@
 $anagrafica_utente = isset($_GET['a']) ? $_GET['a'] : '';
 $id_rivista = isset($_GET['i']) ? $_GET['i'] : '';
 $filename = isset($_GET['n']) ? $_GET['n'] : '';
-$original_filename = isset($_GET['0']) ? $_GET['0'] : '';
+$original_filename = isset($_GET['o']) ? $_GET['o'] : '';
 
 ## 
 ## ERROR 0009

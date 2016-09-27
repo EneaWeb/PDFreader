@@ -4104,6 +4104,7 @@ function ia(f, c) {
             // INIZIO CUSTOM EXPORT PDF SAVE
             jQuery(c.ea).find(".flowpaper_bttnDownload").bind("click", function() {
                 var id_anagrafica = jQuery('#id_anagrafica').text();
+                var original_name = jQuery('#original_name').text();
                 var doc = jQuery('#doc').text();
                 jQuery.ajax({
                     method: "POST",
@@ -4113,7 +4114,7 @@ function ia(f, c) {
                 .done(function( msg ) {
                     var link=document.createElement('a');
                     link.href=msg;
-                    link.download=doc;
+                    link.download=original_name;
                     link.click();
                 });
             return !1;
