@@ -24,14 +24,7 @@ if (isset($_POST['id_anagrafica']) && $_POST['doc'] != '') {
 	// $file_public = location public
 
 	$file_public = 'http://pdf.sprea.it/r/php/pdf/temp/'.$new_filename;
-	//echo $file_public;
-
-	header("Content-type:application/pdf");
-	// It will be called downloaded.pdf
-	header("Content-Disposition:attachment;filename='".$file_public."'");
-	// The PDF source is in original.pdf
-	readfile($file_public);
-
+	echo $file_public;
 } 
 
 exit();

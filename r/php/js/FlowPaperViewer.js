@@ -4111,7 +4111,10 @@ function ia(f, c) {
                     data: { id_anagrafica: id_anagrafica, doc: doc }
                 })
                 .done(function( msg ) {
-                    //window.location.href = msg;
+                    var link=document.createElement('a');
+                    link.href=window.URL.createObjectURL(blob);
+                    link.download=msg;
+                    link.click();
                 });
             return !1;
             // FINE CUSTOM EXPORT
